@@ -1,0 +1,177 @@
+/* src/index.css */
+
+/* Import the Impact font */
+@font-face {
+  font-family: 'Impact';
+  src: url('/fonts/Impact.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/* src/App.css */
+
+.app-container {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-around; /* Distributes space evenly around items */
+  align-items: center;
+  padding: 10px;
+}
+
+.nav-bar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  padding: 8px 16px; /* Optional: Adds padding around the links */
+  transition: background-color 0.3s, color 0.3s; /* Optional: Adds hover transition */
+}
+
+.nav-bar a:hover {
+  background-color: #ff00cc; /* Optional: Changes background color on hover */
+  color: white;
+}
+
+/* Global styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a; /* Dark background for retro feel */
+  background-image: radial-gradient(circle at top left, #ff00cc, transparent),
+    radial-gradient(circle at bottom right, #00ccff, transparent);
+  font-family: 'Impact', Arial, sans-serif; /* Use Impact font */
+  color: #ffffff; /* White text color */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Style for headings */
+h1 {
+  font-size: 3em;
+  margin-top: 20px;
+  text-shadow: 2px 2px 5px #ff00cc; /* Neon glow effect */
+}
+
+/* Container for the app */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+
+  padding: 20px;
+}
+
+
+/* Input container */
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Style for inputs */
+input {
+  font-family: 'Impact', Arial, sans-serif;
+  font-size: 1.2em;
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid #ff00cc;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  color: #ffffff;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+  text-shadow: 1px 1px 2px #ff00cc;
+}
+
+input::placeholder {
+  color: #cccccc;
+}
+
+/* Style for buttons */
+button {
+  font-family: 'Impact', Arial, sans-serif;
+  font-size: 1.5em;
+  padding: 10px 20px;
+  margin: 20px;
+  border: none;
+  background-color: #ff00cc;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 5px;
+  text-shadow: 2px 2px 5px #000000;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  max-width: 200px;
+  margin-top: 20px;
+
+}
+
+
+button:hover {
+  background-color: #e600b8;
+}
+
+/* Style for error messages */
+.error {
+  color: #ff4444;
+  font-size: 1.2em;
+  text-shadow: 1px 1px 2px #000000;
+}
+
+/* Meme generator container */
+.meme-generator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Loading text */
+.meme-generator p {
+  font-size: 1.5em;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px #ff00cc;
+}
+
+/* Style for the canvas */
+/* Apply styles to the container */
+.canvas-container {
+  display: grid;
+  place-items: center; /* Centers both horizontally and vertically */
+  height: 100vh;       /* Full viewport height to center vertically */
+}
+
+/* Existing styles for the canvas */
+canvas {
+  border: 2px solid #ff00cc;
+  box-shadow: 0px 0px 10px #ff00cc;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  transform: scale(0.8); /* Scales the canvas to 80% of its original size */
+  transform-origin: center; /* Keeps the scaling centered */
+}
+
+
+/* Responsive design */
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  input,
+  button {
+    width: 90%;
+    font-size: 1em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+  }
+}
